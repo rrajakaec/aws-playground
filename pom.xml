@@ -11,8 +11,12 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <dagger.version>2.29.1</dagger.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+        <!-- Dagger 2 DI injection-->
+        <dagger.version>2.40.5</dagger.version>
+        <!-- AWS Java SDK -->
+        <aws.java.sdk.version>2.17.100</aws.java.sdk.version>
     </properties>
 
     <dependencies>
@@ -21,6 +25,15 @@
             <artifactId>dagger</artifactId>
             <version>${dagger.version}</version>
         </dependency>
+
+        <!-- AWS DynamoDB -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>s3</artifactId>
+            <version>${aws.java.sdk.version}</version>
+        </dependency>
+
+        <!-- AWS S3 Bucket -->
 
     </dependencies>
     <build>
