@@ -17,6 +17,8 @@
         <dagger.version>2.40.5</dagger.version>
         <!-- AWS Java SDK -->
         <aws.java.sdk.version>2.17.100</aws.java.sdk.version>
+        <!-- DynaamoDB Enchanced -->
+        <dynamodb-enhanced.version>2.15.15</dynamodb-enhanced.version>
     </properties>
 
     <dependencies>
@@ -29,11 +31,23 @@
         <!-- AWS DynamoDB -->
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dynamodb</artifactId>
+            <version>${aws.java.sdk.version}</version>
+        </dependency>
+        <!-- AWS Enchanced DynamoDB -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dynamodb-enhanced</artifactId>
+            <version>${dynamodb-enhanced.version}</version>
+        </dependency>
+
+        <!-- AWS S3 Bucket -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
             <artifactId>s3</artifactId>
             <version>${aws.java.sdk.version}</version>
         </dependency>
 
-        <!-- AWS S3 Bucket -->
 
     </dependencies>
     <build>
